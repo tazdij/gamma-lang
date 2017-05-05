@@ -1,0 +1,61 @@
+module main.main;
+
+# Test external includes
+extern include "stdio.h";
+extern include "math.h";
+
+# External function declerations
+extern fun printf as printf(msg : &String, args : Int);
+extern fun add_int as addInt(a : Int32, b : Int32) >> Int32;
+
+# Type Alias
+type Myint Uint32;
+
+# New Type Struct
+type User {
+    first_name : String;
+    last_name : String;
+    age : Ubyte;
+    days : Myint;
+};
+
+#TODO: Test Function Type (For pointers and such)
+
+# Declare a function on Type
+fun createUser(first : String, last : String, 
+			   age : Ubyte, days : Myint) User >> User {
+	var totalYears : static Int32 = 0x0;
+}
+
+# Function no return type
+fun print(msg : String) {
+	import std.io;
+}
+
+# Function with return type
+fun add(a : Int32, b : Int32) >> Int32 {
+	var tmpAdd : Int32 = a + b;
+
+	print($a);
+
+	return tmpAdd;
+}
+
+
+fun main(args : String[]) >> Int32 {
+    var users : User[10 + 5];
+}
+
+# TODO: Template or Generic Programming
+# fun add(a: `a, b: `a) >> `a {
+#	 return a + b;
+# }
+
+# TODO: Operator Overload
+# op addition(a: Vec3, b: Vec3) >> Vec3 {
+#	 var res : Vec3 = Vec3.construct(a);
+#	 res.x += b.x;
+#	 res.y += b.y;
+#	 res.z += b.z;
+#	 return res;
+#}
