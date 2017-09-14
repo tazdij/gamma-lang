@@ -1,0 +1,24 @@
+module test_program;
+
+import std;
+
+
+/*
+    Variable designators:
+        Data Segment
+        Stack Frame
+        Heap
+*/
+
+fun main() >> Uint32 
+var
+    Uint32 st:Number = 0;
+    String[65] st:Name;
+{
+    for (Uint32 st:i = 0; st:i < 10; st:i++)
+    var
+    
+    {
+        
+    }
+}
